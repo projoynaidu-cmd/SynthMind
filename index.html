@@ -403,7 +403,7 @@
     >
       <div class="mx-auto max-w-7xl px-6">
         <div
-          class="flex flex-col md:flex-row md:items-end md:justify-between gap-6"
+          class="flex  flex-col md:flex-row md:items-end md:justify-between gap-6"
         >
           <div>
             <h2 class="text-3xl md:text-4xl font-bold">
@@ -413,13 +413,14 @@
               Pick a tab to see how SynthMind AI fits your workflow.
             </p>
           </div>
+
           <div
-            class="flex gap-2 bg-white/5 p-1 rounded-2xl border border-white/10 w-full md:w-auto"
+            class="flex relative gap-2 bg-white/5 p-1 rounded-2xl border border-white/10 w-full md:w-auto items-center justify-start overflow-x-auto whitespace-nowrap no-scrollbar"
             role="tablist"
           >
             <button
-              :class="tab==='marketers'?'bg-white/10 text-white':'text-white/70'"
-              class="px-4 py-2 rounded-xl"
+              :class="tab==='marketers' ? 'bg-white/10 text-white' : 'text-white/70'"
+              class="px-4 py-2 rounded-xl inline-flex shrink-0"
               @click="tab='marketers'"
               role="tab"
               aria-selected="true"
@@ -427,29 +428,32 @@
               For Marketers
             </button>
             <button
-              :class="tab==='developers'?'bg-white/10 text-white':'text-white/70'"
-              class="px-4 py-2 rounded-xl"
+              :class="tab==='developers' ? 'bg-white/10 text-white' : 'text-white/70'"
+              class="px-4 py-2 rounded-xl inline-flex shrink-0"
               @click="tab='developers'"
               role="tab"
             >
               For Developers
             </button>
             <button
-              :class="tab==='creators'?'bg-white/10 text-white':'text-white/70'"
-              class="px-4 py-2 rounded-xl"
+              :class="tab==='creators' ? 'bg-white/10 text-white' : 'text-white/70'"
+              class="px-4 py-2 rounded-xl inline-flex shrink-0"
               @click="tab='creators'"
               role="tab"
             >
               For Content Creators
             </button>
             <button
-              :class="tab==='designers'?'bg-white/10 text-white':'text-white/70'"
-              class="px-4 py-2 rounded-xl"
+              :class="tab==='designers' ? 'bg-white/10 text-white' : 'text-white/70'"
+              class="px-4 py-2 rounded-xl inline-flex shrink-0"
               @click="tab='designers'"
               role="tab"
             >
               For Designers
             </button>
+            <!-- this need fix -->
+              <div class="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/10 to-transparent"></div>
+
           </div>
         </div>
 
@@ -551,7 +555,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="py-24 border-t border-white/10">
+    <section class="py-24 border-t border-white/10 ">
       <div class="mx-auto max-w-7xl px-6">
         <div class="flex items-end justify-between">
           <div>
@@ -643,8 +647,8 @@
     <!-- Pricing -->
     <section
       id="pricing"
-      class="py-24 border-t border-white/10"
-      x-data="{annual:true, prices:{free:0, proM:29, proY:24, bizM:79, bizY:66}}"
+      class="py-24 border-t border-white/10 "
+      x-data="{annual:true, prices:{free:0, proM:29, proY:24, bizM:79, bizY:66}} "
     >
       <div class="mx-auto max-w-7xl px-6">
         <div
@@ -748,8 +752,8 @@
     <!-- FAQ -->
     <section
       id="faq"
-      class="py-24 border-t border-white/10"
-      x-data="{open:null}"
+      class="py-24 border-t border-white/10 "
+      x-data="{open:null} "
     >
       <div class="mx-auto max-w-7xl px-6">
         <div class="max-w-2xl">
@@ -807,7 +811,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="border-t border-white/10 py-16">
+    <footer class="border-t border-white/10 py-16 ">
       <div class="mx-auto max-w-7xl px-6 grid md:grid-cols-4 gap-8 items-start">
         <div>
           <div class="flex items-center gap-2">
@@ -843,17 +847,23 @@
               href="#"
               class="h-9 w-9 rounded-lg border border-white/15 flex items-center justify-center hover:bg-white/10"
               aria-label="Twitter"
-            > <i class="fa-brands fa-twitter"></i></a>
+            >
+              <i class="fa-brands fa-twitter"></i
+            ></a>
             <a
               href="#"
               class="h-9 w-9 rounded-lg border border-white/15 flex items-center justify-center hover:bg-white/10"
               aria-label="Instagram"
-            > <i class="fa-brands fa-instagram"></i></a>
+            >
+              <i class="fa-brands fa-instagram"></i
+            ></a>
             <a
               href="#"
               class="h-9 w-9 rounded-lg border border-white/15 flex items-center justify-center hover:bg-white/10"
               aria-label="YouTube"
-            > <i class="fa-brands fa-youtube"></i></a>
+            >
+              <i class="fa-brands fa-youtube"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -882,7 +892,6 @@
           class="aspect-video bg-black/50 rounded-xl flex items-center justify-center"
         >
           <span class="text-white/60">Embed product demo video here</span>
-
         </div>
       </div>
     </div>
